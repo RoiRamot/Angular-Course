@@ -1,0 +1,9 @@
+<div class="home_screen_header">Welcome to my auto shop</div>
+<ul class="baseUl col-md-10 col-md-offset-1">
+  <li *ngFor='let category of CategoryList' class="baseLi" >
+    <div class="baseLiItem" (click)="OnCategoryClickEvent.emit(category.id)" *ngIf="category.id !== 0">
+      <div class="baseLiHeader">{{category.title}}</div>
+      <img class="baseyLiImg" [src]='category.image'>
+    </div>
+  </li>
+</ul>

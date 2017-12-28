@@ -1,0 +1,22 @@
+<div class="headerPanel col-md-10 col-md-offset-1">
+    <select  [value] ="SelectedCategoryName" (change)="SelectedCategoryName=$event.target.value">
+        <option *ngFor="let category of CategoriesList" [value] = "category.title">{{category.title}}</option>
+      </select>
+
+</div>
+<ul class="baseUl col-md-10 col-md-offset-1">
+  <li *ngFor='let product of ProductsList' class="baseLi">
+    <app-flip-card *ngIf="Filer(product.categoryName)">
+        <div class="frontContent baseLiItem">
+          <div class="baseLiHeader">
+            <div class=" col-md-6">{{product.title}}</div>
+            <div class=" col-md-5 col-offset-1">{{product.price}}</div>
+          </div>
+          <img class="baseyLiImg" [src]='product.image'>
+        </div>
+        <div class="backContent baseLiItem">
+          <div class="baseLiHeader productDescription">{{product.description}}</div>
+        </div>
+    </app-flip-card>
+  </li>
+</ul>
