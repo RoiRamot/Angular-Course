@@ -1,7 +1,5 @@
-
-  <div class="menuBackgroundOverlay" on-click='ChangeMenuStateEvent.emit()'></div>
-  <ul class="menuList col-md-3">
-    <li *ngFor='let item of MenuItems' class="menuItem" (click)="listClick($event, item)">{{item}}</li>
-  </ul>
+<div class="menuBackgroundOverlay" on-click='ChangeMenuStateEvent.emit()'></div>
+<ul class="menuList col-md-3">
+  <li *ngFor='let item of MenuItems' class="menuItem" (click)="listClick($event, item)">{{item}}</li>
+</ul>
 <app-social-buttons></app-social-buttons>
-

@@ -9,9 +9,9 @@ export class HomeViewComponent implements OnInit {
   @Output() OnCategoryClickEvent = new EventEmitter<number>();
   @Input() CategoryList: Array<Category>;
   constructor() {
-   }
+  }
 
   ngOnInit() {
   }
 
-  }
+}

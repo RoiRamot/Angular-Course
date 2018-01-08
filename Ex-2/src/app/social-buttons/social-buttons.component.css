@@ -4,7 +4,6 @@
     bottom: 0;
     margin: 0;
     padding: 0;
-
 }
 .socialNetwokUl{
     list-style: none;
@@ -15,8 +14,8 @@
     float: left;
     display: block;
     background-repeat: no-repeat;
-margin-right: 5px;
-margin-left: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
 }
 
 .socialLinkImg{

@@ -6,9 +6,8 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./header-menu.component.css']
 })
 export class HeaderMenuComponent implements OnInit {
- @Output() ChangeMenuStateEvent = new EventEmitter<string>();
-  HeaderImage= '../assets/HeaderBackground.jpeg';
-  isMenuOpen: boolean;
+  @Output() ChangeMenuStateEvent = new EventEmitter<string>();
+  HeaderImage = '../assets/HeaderBackground.jpeg';
   constructor() { }
 
   ngOnInit() {

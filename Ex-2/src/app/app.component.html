@@ -5,15 +5,15 @@
     <div *ngSwitchCase='"About"'>
       <app-about-view></app-about-view>
     </div>​
-    <div *ngSwitchCase='"Products"' >
-      <app-product-view [ProductsList] = 'products' [CategoriesList]='categories' [SelectedCategoryName] = 'SelectedCategoryName'></app-product-view>
+    <div *ngSwitchCase='"Products"'>
+      <app-product-view [ProductsList]='products' [CategoriesList]='categories' [SelectedCategoryName]='SelectedCategoryName'></app-product-view>
     </div>​
     <div *ngSwitchCase='"Contact"'>
       <app-contact-view></app-contact-view>
     </div>​
     <div *ngSwitchDefault>
-      <app-home-view (OnCategoryClickEvent)='OnCategorySelectedEvent($event)' [CategoryList] = 'categories'></app-home-view>
+      <app-home-view (OnCategoryClickEvent)='OnCategorySelectedEvent($event)' [CategoryList]='categories'></app-home-view>
     </div>​
   </div>
-  <app-menu-view  (ChangeMenuStateEvent)='ChangeMenuStateEvent()' (ChangeScreenEvent)='ChangeScreenEvent($event)' [class.hidden]="!isMenuOpen"></app-menu-view>
+  <app-menu-view (ChangeMenuStateEvent)='ChangeMenuStateEvent()' (ChangeScreenEvent)='ChangeScreenEvent($event)' [class.hidden]="!IsMenuOpen"></app-menu-view>
 </div>

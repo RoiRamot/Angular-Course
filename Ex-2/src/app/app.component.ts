@@ -7,9 +7,9 @@ import { Category, Product } from '../assets/Models';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  isMenuOpen = false;
+  IsMenuOpen = false;
   selectedScreen: string;
-  selectedCategoryId= -1;
+  selectedCategoryId = -1;
   SelectedCategoryName: string;
   public categories: Array<Category>;
   public products: Array<Product>;
@@ -19,14 +19,14 @@ export class AppComponent {
     this.LoadData();
   }
   ChangeMenuStateEvent() {
-    this.isMenuOpen = !this.isMenuOpen;
+    this.IsMenuOpen = !this.IsMenuOpen;
   }
   ChangeScreenEvent(screen: string) {
     this.selectedScreen = screen;
   }
   OnCategorySelectedEvent(categoryId: number) {
     this.selectedCategoryId = categoryId;
-      this.SelectedCategoryName = this.categories[this.selectedCategoryId].title;
+    this.SelectedCategoryName = this.categories[this.selectedCategoryId].title;
     this.selectedScreen = 'Products';
   }
   readTextFile(file, callback) {
@@ -42,7 +42,7 @@ export class AppComponent {
   }
 
   CategoryIdToTitle(id: number): string {
-    return 'categroy' + id;
+    return 'category' + id;
   }
 
 
@@ -60,15 +60,15 @@ export class AppComponent {
           allCategoriesNames.push(item.categoryName);
           this.categories.push(new Category(id, item.categoryName, item.image));
           id++;
-          }
-          this.products.push(item);
         }
-      });
-    }
+        this.products.push(item);
+      }
+    });
+  }
 
-    GetImage(name: string){
+  GetImage(name: string) {
 
-    }
+  }
 }
 
 
