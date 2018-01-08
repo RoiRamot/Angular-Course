@@ -1,3 +1,4 @@
+import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
@@ -26,6 +27,7 @@ import { AnchorWrapperComponent } from './anchor-wrapper/anchor-wrapper.componen
     AnchorWrapperComponent
   ],
   imports: [
+    BrowserModule
   ],
   providers: [],
   bootstrap: [AppComponent]
