@@ -1,0 +1,26 @@
+.alignToBottom{
+    position: absolute;
+    display: inline-block;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+
+}
+.socialNetwokUl{
+    list-style: none;
+    margin-left: 70px;
+    padding: 0px;
+}
+.socialNetworkLi{
+    float: left;
+    display: block;
+    background-repeat: no-repeat;
+margin-right: 5px;
+margin-left: 5px;
+}
+
+.socialLinkImg{
+    object-fit: fill;
+    height: 15px;
+    width: 15px;
+}

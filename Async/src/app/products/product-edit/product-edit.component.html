@@ -1,0 +1,17 @@
+<div class="productEditConatainer" >
+  <form #form='ngForm'>
+    Product Name:
+    <input #title="ngModel" name="title" type="text" [(ngModel)]="productToEdit.title" required/>
+    <div class='errorMessage' *ngIf="title.invalid" >Title is requierd</div>
+    <br /> Category:
+    <select #category="ngModel" [(ngModel)]="productToEdit.categoryName" name="category" required>
+      <option *ngFor="let s of productsService.categories" [value]="s.title">{{ s.title }}</option>
+    </select>
+    <br /> Description:
+    <textarea name="description" [(ngModel)]="productToEdit.description"></textarea>
+    <br /> Price:
+    <input #price="ngModel" name="price" [(ngModel)]="productToEdit.price" required/>
+    <div class='errorMessage' *ngIf="price.invalid" >Price is requierd</div>
+  </form>
+  <button (click)="Save()" [disabled]='form.form.invalid'>Save</button>
+</div>

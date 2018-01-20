@@ -1,0 +1,49 @@
+.menuContainer{
+    width: 100%;
+    background-color: dimgrey;
+    padding: 5px;
+}
+.openMenuButton{
+    height: 30px;
+    width: 30px;
+    float: left;
+    background: linear-gradient(
+        to bottom, 
+        dimgrey, dimgrey 15%, 
+        white 15%, white 25%, 
+        dimgrey 25%, dimgrey 35%, 
+        white 35%, white 45%, 
+        dimgrey 45%, dimgrey 55%,
+        white 55%, white 65%, 
+        dimgrey 65%, dimgrey 75%,
+        white 75%, white 85%, 
+        dimgrey 85%, dimgrey 100%     
+           );
+}
+.openMenuButton:hover{
+    background: linear-gradient(
+        to bottom, 
+        cadetblue, cadetblue 15%, 
+        white 15%, white 25%, 
+        cadetblue 25%, cadetblue 35%, 
+        white 35%, white 45%, 
+        cadetblue 45%, cadetblue 55%,
+        white 55%, white 65%, 
+        cadetblue 65%, cadetblue 75%,
+        white 75%, white 85%, 
+        cadetblue 85%, cadetblue 100%     
+           );
+}
+.headerImg{
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+    margin: auto;
+}
+.alignLeft{
+    float: right;    
+}
+.userName{
+    margin: 5px;
+    text-align: end;
+}

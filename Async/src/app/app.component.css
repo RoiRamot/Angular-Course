@@ -1,0 +1,16 @@
+.main_view_background{
+    background-color: whitesmoke;
+    margin-top: 240px;
+    height: 100%;
+    position: absolute;
+}
+.header{
+    position: absolute;
+    width: 100%;
+}
+.appBackground{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: gray;
+}

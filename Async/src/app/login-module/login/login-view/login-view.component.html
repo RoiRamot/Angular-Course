@@ -1,0 +1,9 @@
+<div class="login-page">
+  <div class="form">
+    <div class="login-form">
+      <input type="text" (change)='UserName = $event.target.value' placeholder="username"/>
+      <input type="password" (change)='Password = $event.target.value' placeholder="password"/>
+      <button (click)='Login()'>login</button>
+    </div>
+  </div>
+</div>

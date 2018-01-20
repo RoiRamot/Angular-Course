@@ -1,0 +1,16 @@
+  <div class="shoppingCartContainer">
+  <div class="shoppingCartHeader">Shopping cart</div>
+  <ul class="baseUl col-md-10 col-md-offset-1">
+    <li *ngFor='let item of CartList'  class="baseLi" (click)="ShowDetails(item)">
+          <div class="frontContent baseLiItem">
+            <div class="baseLiHeader">
+              <div class=" col-md-6">{{item.title}}</div>
+              <div class=" col-md-5 col-offset-1">{{item.price}}</div>
+            </div>
+            <img class="baseyLiImg" [src]='item.image'>
+          </div>
+          <button class="removeButton" (click)="RemoveProductFromCart(item)">Remove Item</button>
+        </li>
+  </ul>
+</div>
+<router-outlet></router-outlet>

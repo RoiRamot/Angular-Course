@@ -1,0 +1,10 @@
+
+  <div class="menuBackgroundOverlay" on-click='BackgroundClick()'></div>
+  <ul class="menuList col-md-3">
+    <li *ngFor='let item of MenuItems' class="menuItem" (click)="listClick($event, item)">
+      <span>{{item | localization:'currentLanguage'}} </span>
+      <span *ngIf='IsShoppingCart(item)'>({{cartCount}})</span>
+    </li>
+  </ul>
+<app-social-buttons></app-social-buttons>
+

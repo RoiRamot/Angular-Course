@@ -1,0 +1,7 @@
+<div class="appBackground"></div>
+<app-header-menu class="header" (ChangeMenuStateEvent)='ChangeMenuStateEvent()'></app-header-menu>
+<div class="main_view_background  col-md-10 col-md-offset-1" [ngSwitch]='selectedScreen'>​
+  <router-outlet></router-outlet>
+  <app-menu-view (ChangeMenuStateEvent)='ChangeMenuStateEvent()' (ChangeScreenEvent)='ChangeScreenEvent($event)' [class.hidden]="!isMenuOpen"></app-menu-view>
+</div>
+<app-login-view *ngIf='authenticationService.IsLoginScreenOpen'></app-login-view>

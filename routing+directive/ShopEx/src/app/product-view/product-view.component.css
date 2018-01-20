@@ -1,0 +1,31 @@
+.productDescription{
+    font-size: 12px;  
+    flex: 1;
+    overflow: hidden;  
+}
+.flexContainer{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+.frontContent{
+
+}
+
+.backContent{
+
+}
+.editProductContainer{
+    position: absolute;
+    background-color: blanchedalmond;
+    padding: 100px;
+    margin-left: 25vw;
+    margin-top: 300px;
+}
+.editModeBackground{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.5;
+    background-color: black;
+}
