@@ -1,0 +1,21 @@
+<div class="appBackground"></div>
+<app-header-menu class="header" (ChangeMenuStateEvent)='ChangeMenuStateEvent()'></app-header-menu>
+<div class="main_view_background  col-md-10 col-md-offset-1" [ngSwitch]='selectedScreen'>​
+  <div *ngSwitchCase='"About"'>
+    <app-about-view></app-about-view>
+  </div>​
+  <div *ngSwitchCase='"Products"'>
+    <app-product-view></app-product-view>
+  </div>​
+  <div *ngSwitchCase='"Contact"'>
+    <app-contact-view></app-contact-view>
+  </div>​
+  <div *ngSwitchCase='"ShoppingCart"'>
+    <app-shopping-cart></app-shopping-cart>
+  </div>​
+  <div *ngSwitchDefault>
+    <app-home-view (OnCategoryClickEvent)='OnCategorySelectedEvent($event)'></app-home-view>
+  </div>​
+  <app-menu-view (ChangeMenuStateEvent)='ChangeMenuStateEvent()' (ChangeScreenEvent)='ChangeScreenEvent($event)' [class.hidden]="!isMenuOpen"></app-menu-view>
+</div>
+<app-login-view *ngIf='authenticationService.IsLoginScreenOpen'></app-login-view>

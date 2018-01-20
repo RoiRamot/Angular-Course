@@ -1,0 +1,12 @@
+<div class="menuContainer">
+    <span class="userName">Hello {{UserName}}</span>
+    <button *ngIf='!IsUserLoggedIn' (click)='OpenLogin()'>Login</button>
+    <button *ngIf='IsUserLoggedIn' (click)='Logout()'>Logout</button>
+  <div>
+    <div class="openMenuButton" (click)='ChangeMenuStateEvent()'></div>
+    <select class="alignLeft" [value]='SelectedLanguage' (change)='OnLanguageSelectionChanged($event.target.value)'>
+      <option *ngFor='let lang of Languages' [value]='lang'>{{lang}}</option>
+    </select>
+    <span class="alignLeft">Select Language: </span>
+  </div>
+  <img class="headerImg" [src]='HeaderImage'>
